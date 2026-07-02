@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "pyvelv"
+version = "0.1.3"
+description = "Async Python SDK for the Velvpay payment gateway"
+authors = ["Velvpay SDK Team"]
+readme = "README.md"
+packages = [{include = "pyvelv"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+httpx = ">=0.27.0"
+pydantic = ">=2.0"
+pycryptodome = ">=3.20.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = ">=8.0"
+pytest-asyncio = ">=0.24.0"
+respx = ">=0.21.0"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
